@@ -1,0 +1,10 @@
+\section{Figures with flexible width}
+
+\hrule % to see \linewidth
+
+\includegraphics[max width=0.9\linewidth]{example-image-1x1}
+
+\includegraphics[max width=0.9\linewidth]{example-image-a4}
+
+% With \adjincludegraphics (or \adjustimage) you can also use the original width as \width:
+\adjincludegraphics[width=\ifdim \width > \linewidth \linewidth \else \width \fi]{example-image}

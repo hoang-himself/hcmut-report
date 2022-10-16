@@ -1,0 +1,28 @@
+\section{Codeblocks}
+There are several ways to embed code in a \LaTeX file.
+Here I demonstrate inline code, embedded codeblocks, and external import.
+
+This version of embedded code uses a custom environment defined in the main file.
+You can expand this environment instead of using \mintinline{latex}{code} as well.
+
+\begin{code}{Python}
+  class iostream:
+      def __lshift__(self, other):
+          print(other, end='')
+          return self
+
+      def __repr__(self):
+          return ''
+
+
+  if __name__ == "__main__":
+      cout = iostream()
+      endl = '\n'
+      cout << "Hello" << ", " << "World!" << endl
+\end{code}
+
+\begin{mdframed}[leftline=false,rightline=false,backgroundcolor=magenta!10,nobreak=false]
+  \inputminted[linenos=true,breaklines,breaksymbolleft=,obeytabs=true,tabsize=2]{Python}{main.py}
+\end{mdframed}
+
+You can also define your custom inline as \url{https://tex.stackexchange.com/a/148479}.

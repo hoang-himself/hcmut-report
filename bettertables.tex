@@ -1,0 +1,22 @@
+\section{Better tables}
+The recommended way is by using the booktabs package and drop all vertical rules.
+
+Tabularx is simply tabular but with X environment, meaning that it will try to use all of \mintinline{latex}{\linewidth}.
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{l*{2}{X}}
+    \toprule
+         & OOP & FP \\
+    \cmidrule(lr){2-3}
+    Pros &     &    \\
+         &     &    \\
+         &     &    \\
+    \midrule
+    Cons &     &    \\
+         &     &    \\
+         &     &    \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+More information can be found at \url{https://latex-tutorial.com/tables-in-latex/}.
