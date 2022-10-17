@@ -1,0 +1,140 @@
+\ProvidesPackage{hcmut-report}
+
+\RequirePackage[utf8]{vntex,inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{geometry,graphicx,indentfirst,setspace}
+\RequirePackage{anyfontsize}
+\RequirePackage{booktabs,tabularx}
+\RequirePackage{fancyhdr,lastpage,hyperref}
+
+% Sub-preambles
+% https://tex.stackexchange.com/a/395416
+
+\newcommand{\Month}{
+  \ifcase \the\month
+  \or January
+  \or February
+  \or March
+  \or April
+  \or May
+  \or June
+  \or July
+  \or August
+  \or September
+  \or October
+  \or November
+  \or December
+  \fi
+}
+
+\newcommand{\@deptname}{Faculty of Computer Science and Engineering}
+\newcommand{\odeptname}[1]{\renewcommand{\@deptname}{#1}}
+
+\newcommand{\@coursename}{Course name}
+\newcommand{\ocoursename}[1]{\renewcommand{\@coursename}{#1}}
+
+\newcommand{\@reporttype}{Assignment Report}
+\newcommand{\oreporttype}[1]{\renewcommand{\@reporttype}{#1}}
+
+\renewcommand{\@title}{Report title}
+\newcommand{\otitle}[1]{\renewcommand{\@title}{#1}}
+
+\newcommand{\@advisor}{Advisor}
+\newcommand{\oadvisor}[1]{\renewcommand{\@advisor}{#1}}
+
+\newcommand{\@reportplace}{Ho Chi Minh City}
+\newcommand{\oreportplace}[1]{\renewcommand{\@reportplace}{#1}}
+
+\newcommand{\@reporttime}{\Month \the\year}
+\newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
+
+\def\reportlayout{
+  \geometry{
+    a4paper,
+    margin=3cm
+  }
+
+  \onehalfspacing
+
+  % Allow page breaks inside align* environment
+  % \allowdisplaybreaks{}
+
+  % Makes a lot of things blue, avoid at all costs
+  % \everymath{\color{blue}}
+
+  % Table of contents section text
+  % \AtBeginDocument{\renewcommand*\contentsname{Contents}}
+
+  % References section text
+  % \AtBeginDocument{\renewcommand*\refname{References}}
+
+  % Numbering format
+  % {equation}{section} means <section number>.<equation number>
+  % {equation}{subsection} means <section number>.<subsection number>.<equation number>
+  % \numberwithin{equation}{section}
+
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black,
+    citecolor=red
+  }
+
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0.3pt}
+  \renewcommand{\footrulewidth}{0.3pt}
+  \setlength{\headheight}{40pt}
+
+  \fancyhead{}
+  \fancyhead[L]{
+    \begin{tabular}{rl}
+      \begin{picture}(25,15)(0,0)
+      \put(0,-8){\includegraphics[width=8mm, height=8mm]{assets/hcmut.png}}
+      \end{picture}
+      \begin{tabular}{l}
+        \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City}\\
+        \textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
+      \end{tabular}
+    \end{tabular}
+  }
+  \fancyhead[R]{
+    \begin{tabular}{l}
+      \tiny \bf \\
+      \tiny \bf
+    \end{tabular}
+  }
+
+  \fancyfoot{}
+  \fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
+  \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+}
+
+\def\coverpage{
+  \thispagestyle{empty}
+
+  \begin{center}
+    VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY
+
+    HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
+
+    \MakeUppercase{\@deptname}
+    \\[3cm]
+    \includegraphics[scale=0.4]{assets/hcmut.png}
+    \\[1cm]
+    \begin{tabular}{c}
+      \textbf{\Large \@coursename} \\
+      {}                           \\
+      \midrule                     \\
+      {}                           \\
+      \textbf{\Large \@reporttype} \\
+      {}                           \\
+      \textbf{\Huge \@title}       \\
+      {}                           \\
+      \bottomrule
+    \end{tabular}
+    \\[4cm]
+    Advisor: \@advisor
+    \\[2cm]
+    \MakeUppercase{\@reportplace, \@reporttime}
+  \end{center}
+}

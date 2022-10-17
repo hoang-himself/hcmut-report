@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\usepackage{hcmut-report,codespace}
+
+% Encodings
+\usepackage{amsmath,amssymb,gensymb,textcomp}
+
+% Better tables
+% Wide tables go https://tex.stackexchange.com/q/332902
+\usepackage{array,multicol,multirow,siunitx,tabularx}
+
+% Better enum
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{caption,float}
+
+% Allow setting >max< width of figure
+% Remove if unneeded
+\usepackage[export]{adjustbox} % 'export' allows adjustbox keys in \includegraphics
+\usepackage{mwe}
+
+% Custom commands
+\newcommand*\mean[1]{\bar{#1}}
+
+\ocoursename{Course name h}
+\oreporttype{Report type h}
+\title{Report title h}
+\oadvisor{Advisor h}
+\reportlayout%
+
+\begin{document}
+
+\coverpage%
+
+\section*{Member list \& Workload}
+\begin{center}
+  \begin{tabular}{llcc}
+    \toprule
+    \textbf{No.} & \textbf{Full name} & \textbf{Student ID} & \textbf{Percentage of work} \\
+    \midrule
+    1            & h                  & xxxxxxx             & 100\%                       \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Normal section}
+This is how you normally work with \LaTeX, but you can also split a project into smaller files for easier management.
+To import other files, you can use \mintinline{latex}{\input{}} or \mintinline{latex}{\include{}}.
+There differences can be found at \url{https://tex.stackexchange.com/a/250}, but in short
+
+\[\mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}\]
+
+\include{chapters/sample/bettertables.tex}
+
+\include{chapters/sample/betterenum.tex}
+
+\include{chapters/sample/codespace.tex}
+
+\include{chapters/sample/figwidth.tex}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\nocite{*}
+
+\end{document}

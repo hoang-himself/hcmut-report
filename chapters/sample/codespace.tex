@@ -26,3 +26,15 @@ You can expand this environment instead of using \mintinline{latex}{code} as wel
 \end{mdframed}
 
 You can also define your custom inline as \url{https://tex.stackexchange.com/a/148479}.
+
+This is one way to input algorithms.
+
+\begin{algorithm}
+  \caption{QL algorithm}
+  Initialize $Q$-table values $(Q(s, a))$ arbitrarily\;
+  Initialize a state $(s_t)$\;
+  Repeat Steps~\ref{alg:step_4} to~\ref{alg:step_6} until learning period ends\;
+  Choose an action $(a_t)$ for the current state $(s_t)$ using an exploratory policy\; \nllabel{alg:step_4}
+  Take action $(a_t)$ and observe the new state $(s_t + 1)$ and reward $(r_t + 1)$\;
+  Update $Q$-value\; \nllabel{alg:step_6}
+\end{algorithm}
