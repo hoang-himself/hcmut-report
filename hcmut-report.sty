@@ -51,7 +51,8 @@
 \def\reportlayout{
   \geometry{
     a4paper,
-    margin=3cm
+    vmargin=3cm,
+    hmargin=2cm
   }
 
   \onehalfspacing
@@ -118,9 +119,9 @@
     HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
 
     \MakeUppercase{\@deptname}
-    \\[3cm]
-    \includegraphics[scale=0.4]{assets/hcmut.png}
-    \\[1cm]
+    \\[5\baselineskip]
+    \includegraphics[width=0.4\textwidth]{assets/hcmut.png}
+    \\[3\baselineskip]
     \begin{tabular}{c}
       \textbf{\Large \@coursename} \\
       {}                           \\
@@ -132,9 +133,9 @@
       {}                           \\
       \bottomrule
     \end{tabular}
-    \\[4cm]
+    \\[4\baselineskip]
     Advisor: \@advisor
-    \\[2cm]
+    \\[4\baselineskip]
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 }
