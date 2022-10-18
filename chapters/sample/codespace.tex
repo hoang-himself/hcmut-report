@@ -1,5 +1,5 @@
 \section{Codeblocks}
-There are several ways to embed code in a \LaTeX file.
+There are several ways to embed code in a \LaTeX{} file.
 Here I demonstrate inline code, embedded codeblocks, and external import.
 
 This version of embedded code uses a custom environment defined in the main file.
@@ -31,10 +31,10 @@ This is one way to input algorithms.
 
 \begin{algorithm}
   \caption{QL algorithm}
-  Initialize $Q$-table values $(Q(s, a))$ arbitrarily\;
-  Initialize a state $(s_t)$\;
+  Initialize \(Q\)-table values \((Q(s, a))\) arbitrarily\;
+  Initialize a state \((s_t)\)\;
   Repeat Steps~\ref{alg:step_4} to~\ref{alg:step_6} until learning period ends\;
-  Choose an action $(a_t)$ for the current state $(s_t)$ using an exploratory policy\; \nllabel{alg:step_4}
-  Take action $(a_t)$ and observe the new state $(s_t + 1)$ and reward $(r_t + 1)$\;
-  Update $Q$-value\; \nllabel{alg:step_6}
+  Choose an action \((a_t)\) for the current state \((s_t)\) using an exploratory policy\; \nllabel{alg:step_4}
+  Take action \((a_t)\) and observe the new state \((s_t + 1)\) and reward \((r_t + 1)\)\;
+  Update \(Q\)-value\; \nllabel{alg:step_6}
 \end{algorithm}

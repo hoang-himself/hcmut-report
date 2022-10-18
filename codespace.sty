@@ -4,17 +4,16 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{tikz}
 \RequirePackage[framemethod=tikz]{mdframed}
-\RequirePackage{minted, verbatim}
+\RequirePackage{minted,verbatim}
 \RequirePackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 
 \usemintedstyle{emacs}
 
-\newenvironment{code}[1]
-{\VerbatimEnvironment%
+\newenvironment{code}[1]{
+  \VerbatimEnvironment%
   \begin{mdframed}[leftline=false,rightline=false,backgroundcolor=magenta!10,nobreak=false]%
     \begin{minted}[linenos=true,breaklines,breaksymbolleft=,obeytabs=true,tabsize=2]{#1}%
-}
-{
+}{
     \end{minted}%
   \end{mdframed}%
 }
