@@ -4,7 +4,7 @@
 \RequirePackage[english]{babel}
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
 \RequirePackage{anyfontsize}
-\RequirePackage{booktabs,tabularx}
+\RequirePackage{booktabs}
 \RequirePackage{fancyhdr,lastpage,hyperref}
 
 \newcommand{\Month}{
@@ -120,14 +120,14 @@
     \includegraphics[width=0.4\textwidth]{assets/hcmut.png}
     \\[3\baselineskip]
     \begin{tabular}{c}
-      \textbf{\Large \@coursename} \\
-      {}                           \\
-      \midrule                     \\
-      {}                           \\
-      \textbf{\Large \@reporttype} \\
-      {}                           \\
-      \textbf{\Huge \@title}       \\
-      {}                           \\
+      \textbf{\Large \@coursename}                        \\
+      {}                                                  \\
+      \midrule                                            \\
+      {}                                                  \\
+      \textbf{\Large \@reporttype}                        \\
+      {}                                                  \\
+      \textbf{\Huge \parbox[c]{16cm}{\centering \@title}} \\
+      {}                                                  \\
       \bottomrule
     \end{tabular}
     \vfill%
