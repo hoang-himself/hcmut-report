@@ -10,19 +10,19 @@
 \usemintedstyle{emacs}
 
 \newcommand{\@codeframe}{
+  backgroundcolor=magenta!10,
   leftline=false,
   rightline=false,
-  backgroundcolor=magenta!10,
   nobreak=false
 }
 \newcommand{\ocodeframe}[1]{\renewcommand{\@codeframe}{#1}}
 
 \newcommand{\@codestyle}{
   linenos=true,
-  firstnumber=1,
-  breaklines,
-  breaksymbolleft=,
   autogobble=true,
+  breaklines=true,
+  breaksymbolleft={},
+  firstnumber=1,
   obeytabs=true,
   tabsize=2
 }
