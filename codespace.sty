@@ -9,11 +9,36 @@
 
 \usemintedstyle{emacs}
 
-\newenvironment{code}[1]{
+\newcommand{\@codeframe}{
+  leftline=false,
+  rightline=false,
+  backgroundcolor=magenta!10,
+  nobreak=false
+}
+\newcommand{\ocodeframe}[1]{\renewcommand{\@codeframe}{#1}}
+
+\newcommand{\@codestyle}{
+  linenos=true,
+  firstnumber=1,
+  breaklines,
+  breaksymbolleft=,
+  autogobble=true,
+  obeytabs=true,
+  tabsize=2
+}
+\newcommand{\ocodestyle}[1]{\renewcommand{\@codestyle}{#1}}
+
+\newenvironment{code}[2][]{
   \VerbatimEnvironment%
-  \begin{mdframed}[leftline=false,rightline=false,backgroundcolor=magenta!10,nobreak=false]%
-    \begin{minted}[linenos=true,breaklines,breaksymbolleft=,obeytabs=true,tabsize=2]{#1}%
+  \edef\xmdframed{\noexpand\begin{mdframed}[\@codeframe]}\xmdframed%
+    \edef\xminted{\noexpand\begin{minted}[\@codestyle,#1]{#2}}\xminted%
 }{
     \end{minted}%
+  \end{mdframed}%
+}
+
+\newcommand{\inputcode}[3][]{
+  \edef\xmdframed{\noexpand\begin{mdframed}[\@codeframe]}\xmdframed%
+    \edef\xinputminted{\noexpand\inputminted[\@codestyle,#1]{#2}{#3}}\xinputminted%
   \end{mdframed}%
 }

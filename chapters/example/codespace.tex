@@ -1,11 +1,19 @@
 \section{Codeblocks}
 There are several ways to embed code in a \LaTeX{} file.
-Here I demonstrate inline code, embedded codeblocks, and external import.
+Here are inline code, embedded codeblock, and external import.
 
-This version of embedded code uses a custom environment defined in the main file.
-You can expand this environment instead of using \mintinline{latex}{code} as well.
+\begin{itemize}
+  \item External import
 
-\begin{code}{Python}
+  \inputcode[highlightlines={1,10-13}]{Python}{assets/code/example.py}
+
+  \item With custom line range
+
+  \inputcode[firstline=10,lastline=13]{Python}{assets/code/example.py}
+
+  \item Embedded
+
+  \begin{code}{Python}
   class iostream:
       def __lshift__(self, other):
           print(other, end='')
@@ -13,23 +21,18 @@ You can expand this environment instead of using \mintinline{latex}{code} as wel
 
       def __repr__(self):
           return ''
+  \end{code}
 
+  \item Inline
 
-  if __name__ == "__main__":
-      cout = iostream()
-      endl = '\n'
-      cout << "Hello" << ", " << "World!" << endl
-\end{code}
-
-\begin{mdframed}[leftline=false,rightline=false,backgroundcolor=magenta!10,nobreak=false]
-  \inputminted[linenos=true,breaklines,breaksymbolleft=,obeytabs=true,tabsize=2]{Python}{assets/code/example.py}
-\end{mdframed}
+  \mintinline{Python}{print('Hello, world!')}
+\end{itemize}
 
 You can also define your custom inline as \url{https://tex.stackexchange.com/a/148479}.
 
 This is one way to input algorithms.
 
-\begin{algorithm}
+\begin{algorithm}[H]
   \caption{QL algorithm}
   Initialize \(Q\)-table values \((Q(s, a))\) arbitrarily\;
   Initialize a state \((s_t)\)\;
