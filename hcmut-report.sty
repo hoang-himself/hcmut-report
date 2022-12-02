@@ -13,6 +13,8 @@
 % Draft watermark
 % https://github.com/callegar/LaTeX-draftwatermark
 
+%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
+
 \newcommand{\Month}{
   \ifcase \the\month
   \or January
@@ -93,7 +95,7 @@
   \fancyhead[L]{
     \begin{tabular}{rl}
       \begin{picture}(25,15)(0,0)
-        \put(0,-8){\includegraphics[width=8mm,height=8mm]{assets/hcmut.png}}
+        \put(0,-8){\includegraphics[width=8mm,height=8mm]{graphics/hcmut.png}}
       \end{picture}
       \begin{tabular}{l}
         \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City} \\
@@ -123,7 +125,7 @@
 
     \MakeUppercase{\@deptname}
     \\[5\baselineskip]
-    \includegraphics[width=0.4\textwidth]{assets/hcmut.png}
+    \includegraphics[width=0.4\textwidth]{graphics/hcmut.png}
     \\[3\baselineskip]
     \begin{tabular}{c}
       \textbf{\Large \@coursename}                        \\
