@@ -11,8 +11,8 @@ insert_final_newline = true
 [*.{bat,cmd}]
 end_of_line = crlf
 
+[*.{md,py}]
+indent_size = 4
+
 [*.json]
 insert_final_newline = false
-
-[*.py]
-indent_size = 4
