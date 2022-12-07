@@ -24,6 +24,9 @@
 \usepackage[export]{adjustbox} % 'export' allows adjustbox keys in \includegraphics
 \usepackage{mwe}
 
+\newcounter{memberrowno}
+\setcounter{memberrowno}{0}
+
 \ocoursename{Course name h}
 \oreporttype{Report type h}
 \title{Report title h}
@@ -40,11 +43,12 @@
 
 \section*{Member list \& Workload}
 \begin{center}
-  \begin{tabular}{llcc}
+  \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llcc}
     \toprule
-    \textbf{No.} & \textbf{Full name} & \textbf{Student ID} & \textbf{Percentage of work} \\
+    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{Student ID} & \textbf{Percentage of work} \\
     \midrule
-    1            & h                  & xxxxxxx             & 100\%                       \\
+                                     & h                  & xxxxxxx             & 100\%                       \\
+                                     & h                  & xxxxxxx             & 100\%                       \\
     \bottomrule
   \end{tabular}
 \end{center}
