@@ -20,10 +20,13 @@
 \usepackage{caption,float}
 
 % Allow setting >max< width of figure
-% Remove if unneeded
-\usepackage[export]{adjustbox} % 'export' allows adjustbox keys in \includegraphics
+% 'export' allows adjustbox keys in \includegraphics
+\usepackage[export]{adjustbox}
+
+% For demonstration purposes, remove in production
 \usepackage{mwe}
 
+% Configurations
 \newcounter{memberrowno}
 \setcounter{memberrowno}{0}
 
@@ -34,7 +37,6 @@
 \reportlayout%
 
 % Custom commands
-% Remove if unneeded
 \newcommand*\mean[1]{\bar{#1}}
 
 \begin{document}
