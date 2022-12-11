@@ -1,13 +1,11 @@
-\documentclass{article}
-
-\usepackage{hcmut-report}
+\documentclass{hcmut-report}
 \usepackage{codespace}
 
 % Sub-preambles
 % https://github.com/MartinScharrer/standalone
 
 % Encodings
-\usepackage{amsmath,amssymb,gensymb,textcomp}
+\usepackage{gensymb,textcomp}
 
 % Better tables
 % Wide tables go to https://tex.stackexchange.com/q/332902
@@ -21,6 +19,7 @@
 
 % Allow setting >max< width of figure
 % 'export' allows adjustbox keys in \includegraphics
+% For demonstration purposes, remove in production
 \usepackage[export]{adjustbox}
 
 % For demonstration purposes, remove in production
@@ -40,7 +39,6 @@
 \newcommand*\mean[1]{\bar{#1}}
 
 \begin{document}
-
 \coverpage%
 
 \section*{Member list \& Workload}
@@ -64,7 +62,9 @@ This is how you normally work with \LaTeX, but you can also split a project into
 To import other files, you can use \mintinline{latex}{\input{}} or \mintinline{latex}{\include{}}.
 There differences can be found at \url{https://tex.stackexchange.com/a/250}, but in short
 
-\[\mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}\]
+\begin{center}
+  \mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}
+\end{center}
 
 \include{chapters/example/bettertables.tex}
 \include{chapters/example/betterenum.tex}

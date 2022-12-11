@@ -1,11 +1,20 @@
-\ProvidesPackage{hcmut-report}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{hcmut-report}
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\ProcessOptions\relax
+\LoadClass[a4paper]{article}
 
 \RequirePackage[utf8]{vntex,inputenc}
+\RequirePackage{anyfontsize,amsmath,amssymb}
+\RequirePackage[T5]{fontenc}
 
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
-\RequirePackage{anyfontsize}
 \RequirePackage{booktabs}
+
 \RequirePackage{fancyhdr,lastpage,hyperref}
+\RequirePackage[super,square,sort]{natbib}
+\RequirePackage[nameinlink]{cleveref} % use \Cref{} instead of \ref{}
 
 % Change to '[english,vietnamese]' to use Vietnamese labels
 \RequirePackage[english]{babel}
@@ -81,17 +90,18 @@
   % {equation}{subsection} means <section number>.<subsection number>.<equation number>
   % \numberwithin{equation}{section}
 
+  \AtBeginDocument{\renewcommand*\bibname{References}}
+
   \hypersetup{
     colorlinks=true,
-    urlcolor=blue,
     linkcolor=black,
-    citecolor=red
+    citecolor=red,
+    urlcolor=blue
   }
 
   \pagestyle{fancy}
-  \renewcommand{\headrulewidth}{0.3pt}
-  \renewcommand{\footrulewidth}{0.3pt}
 
+  \renewcommand{\headrulewidth}{0.3pt}
   \fancyhead{}
   \fancyhead[L]{
     \begin{tabular}{rl}
@@ -111,6 +121,7 @@
     \end{tabular}
   }
 
+  \renewcommand{\footrulewidth}{0.3pt}
   \fancyfoot{}
   \fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
   \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
@@ -119,6 +130,7 @@
 \def\coverpage{
   \thispagestyle{empty}
 
+  \vspace*{-3\baselineskip}
   \begin{center}
     VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY
 
@@ -126,25 +138,25 @@
 
     \MakeUppercase{\@deptname}
     \\[5\baselineskip]
-    \includegraphics[width=0.4\textwidth]{graphics/hcmut.png}
+    \includegraphics[scale=0.6]{graphics/hcmut.png}
     \\[3\baselineskip]
     \begin{tabular}{c}
-      \textbf{\Large \@coursename}                        \\
-      {}                                                  \\
-      \midrule                                            \\
-      {}                                                  \\
-      \textbf{\Large \@reporttype}                        \\
-      {}                                                  \\
-      \textbf{\Huge \parbox[c]{16cm}{\centering \@title}} \\
-      {}                                                  \\
+      \textbf{\Large \@coursename}                                 \\
+      {}                                                           \\
+      \midrule                                                     \\
+      {}                                                           \\
+      \textbf{\Large \@reporttype}                                 \\
+      {}                                                           \\
+      \textbf{\Huge \parbox[c]{0.8\linewidth}{\centering \@title}} \\
+      {}                                                           \\
       \bottomrule
     \end{tabular}
     \vfill%
     \begin{tabular}{rll}
-      Advisor: & \@advisor &    \\
+      Advisor: & \@advisor & \\
       % Student: & Name      & ID \\
     \end{tabular}
-    \\[4\baselineskip]
+    \\[3\baselineskip]
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 
