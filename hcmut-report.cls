@@ -138,7 +138,7 @@
 
     \MakeUppercase{\@deptname}
     \\[5\baselineskip]
-    \includegraphics[scale=0.6]{graphics/hcmut.png}
+    \includegraphics[scale=0.4]{graphics/hcmut.png}
     \\[3\baselineskip]
     \begin{tabular}{c}
       \textbf{\Large \@coursename}                                 \\

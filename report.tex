@@ -28,12 +28,13 @@
 % Configurations
 \newcounter{memberrowno}
 \setcounter{memberrowno}{0}
+\reportlayout%
 
+% Override (some) default values
 \ocoursename{Course name h}
 \oreporttype{Report type h}
 \title{Report title h}
 \oadvisor{Advisor h}
-\reportlayout%
 
 % Custom commands
 \newcommand*\mean[1]{\bar{#1}}
@@ -45,7 +46,7 @@
 \begin{center}
   \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llcc}
     \toprule
-    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{Student ID} & \textbf{Percentage of work} \\
+    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{Student ID} & \textbf{Contribution} \\
     \midrule
                                      & h                  & xxxxxxx             & 100\%                       \\
                                      & h                  & xxxxxxx             & 100\%                       \\
