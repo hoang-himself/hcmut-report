@@ -74,21 +74,21 @@
   \onehalfspacing%
 
   % Allow page breaks inside align* environment
-  % \allowdisplaybreaks{}
+  %\allowdisplaybreaks{}
 
   % Makes a lot of things blue, avoid at all costs
-  % \everymath{\color{blue}}
+  %\everymath{\color{blue}}
 
   % Table of contents section text
-  % \AtBeginDocument{\renewcommand*\contentsname{Contents}}
+  %\AtBeginDocument{\renewcommand*\contentsname{Contents}}
 
   % References section text
-  % \AtBeginDocument{\renewcommand*\refname{References}}
+  %\AtBeginDocument{\renewcommand*\refname{References}}
 
   % Numbering format
   % {equation}{section} means <section number>.<equation number>
   % {equation}{subsection} means <section number>.<subsection number>.<equation number>
-  % \numberwithin{equation}{section}
+  %\numberwithin{equation}{section}
 
   \AtBeginDocument{\renewcommand*\bibname{References}}
 
