@@ -24,6 +24,7 @@
 
 %\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
+% % Custom commands
 \newcommand{\Month}{
   \ifcase \the\month
   \or January
@@ -62,71 +63,71 @@
 \newcommand{\@reporttime}{\Month \the\year}
 \newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
-\def\reportlayout{
-  \geometry{
-    paper=a4paper,
-    vmargin=3cm,
-    hmargin=2cm,
-    includeheadfoot=true,
-    headheight=30pt
-  }
-
-  \onehalfspacing%
-
-  % Allow page breaks inside align* environment
-  %\allowdisplaybreaks{}
-
-  % Makes a lot of things blue, avoid at all costs
-  %\everymath{\color{blue}}
-
-  % Table of contents section text
-  %\AtBeginDocument{\renewcommand*\contentsname{Contents}}
-
-  % References section text
-  %\AtBeginDocument{\renewcommand*\refname{References}}
-
-  % Numbering format
-  % {equation}{section} means <section number>.<equation number>
-  % {equation}{subsection} means <section number>.<subsection number>.<equation number>
-  %\numberwithin{equation}{section}
-
-  \AtBeginDocument{\renewcommand*\bibname{References}}
-
-  \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    citecolor=red,
-    urlcolor=blue
-  }
-
-  \pagestyle{fancy}
-
-  \renewcommand{\headrulewidth}{0.3pt}
-  \fancyhead{}
-  \fancyhead[L]{
-    \begin{tabular}{rl}
-      \begin{picture}(25,15)(0,0)
-        \put(0,-8){\includegraphics[width=8mm,height=8mm]{graphics/hcmut.png}}
-      \end{picture}
-      \begin{tabular}{l}
-        \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City} \\
-        \textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
-      \end{tabular}
-    \end{tabular}
-  }
-  \fancyhead[R]{
-    \begin{tabular}{l}
-      \tiny \bf \\
-      \tiny \bf
-    \end{tabular}
-  }
-
-  \renewcommand{\footrulewidth}{0.3pt}
-  \fancyfoot{}
-  \fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
-  \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+% % Configurations
+\geometry{
+  paper=a4paper,
+  vmargin=3cm,
+  hmargin=2cm,
+  includeheadfoot=true,
+  headheight=30pt
 }
 
+\onehalfspacing%
+
+% Allow page breaks inside align* environment
+%\allowdisplaybreaks{}
+
+% Makes a lot of things blue, avoid at all costs
+%\everymath{\color{blue}}
+
+% Table of contents section text
+%\AtBeginDocument{\renewcommand*\contentsname{Contents}}
+
+% References section text
+%\AtBeginDocument{\renewcommand*\refname{References}}
+
+% Numbering format
+% {equation}{section} means <section number>.<equation number>
+% {equation}{subsection} means <section number>.<subsection number>.<equation number>
+%\numberwithin{equation}{section}
+
+\AtBeginDocument{\renewcommand*\bibname{References}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=red,
+  urlcolor=blue
+}
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead{}
+\fancyhead[L]{
+  \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+      \put(0,-8){\includegraphics[width=8mm,height=8mm]{graphics/hcmut.png}}
+    \end{picture}
+    \begin{tabular}{l}
+      \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City} \\
+      \textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
+    \end{tabular}
+  \end{tabular}
+}
+\fancyhead[R]{
+  \begin{tabular}{l}
+    \tiny \bf \\
+    \tiny \bf
+  \end{tabular}
+}
+
+\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot{}
+\fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+
+% % Custom pages and sections
 \def\coverpage{
   \thispagestyle{empty}
 
