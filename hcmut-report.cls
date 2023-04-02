@@ -24,7 +24,7 @@
 
 %\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
-% % Custom commands
+% Custom commands
 \newcommand{\Month}{
   \ifcase \the\month
   \or January
@@ -63,7 +63,7 @@
 \newcommand{\@reporttime}{\Month \the\year}
 \newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
-% % Configurations
+% Configurations
 \geometry{
   paper=a4paper,
   vmargin=3cm,
@@ -127,7 +127,7 @@
 \fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
 \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
 
-% % Custom pages and sections
+% Custom pages and sections
 \def\coverpage{
   \thispagestyle{empty}
 
