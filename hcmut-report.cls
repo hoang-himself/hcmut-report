@@ -91,6 +91,10 @@
 % {equation}{subsection} means <section number>.<subsection number>.<equation number>
 %\numberwithin{equation}{section}
 
+% Set depth of numbering for sections and table of contents
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
 \AtBeginDocument{\renewcommand*\bibname{References}}
 
 \hypersetup{
