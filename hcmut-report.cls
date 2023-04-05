@@ -11,6 +11,7 @@
 
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
 \RequirePackage{booktabs}
+\RequirePackage[center]{caption}
 
 \RequirePackage{fancyhdr,lastpage,hyperref}
 \RequirePackage[super,square,sort]{natbib}
