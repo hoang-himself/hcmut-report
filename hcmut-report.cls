@@ -44,25 +44,24 @@
 }
 
 \newcommand{\@deptname}{Faculty of Computer Science and Engineering}
-\newcommand{\odeptname}[1]{\renewcommand{\@deptname}{#1}}
+\newcommand{\deptname}[1]{\renewcommand{\@deptname}{#1}}
 
 \newcommand{\@coursename}{Course name}
-\newcommand{\ocoursename}[1]{\renewcommand{\@coursename}{#1}}
+\newcommand{\coursename}[1]{\renewcommand{\@coursename}{#1}}
 
 \newcommand{\@reporttype}{Assignment Report}
-\newcommand{\oreporttype}[1]{\renewcommand{\@reporttype}{#1}}
+\newcommand{\reporttype}[1]{\renewcommand{\@reporttype}{#1}}
 
 \renewcommand{\@title}{Report title}
-\newcommand{\otitle}[1]{\renewcommand{\@title}{#1}}
 
 \newcommand{\@advisor}{Advisor}
-\newcommand{\oadvisor}[1]{\renewcommand{\@advisor}{#1}}
+\newcommand{\advisor}[1]{\renewcommand{\@advisor}{#1}}
 
 \newcommand{\@reportplace}{Ho Chi Minh City}
-\newcommand{\oreportplace}[1]{\renewcommand{\@reportplace}{#1}}
+\newcommand{\reportplace}[1]{\renewcommand{\@reportplace}{#1}}
 
 \newcommand{\@reporttime}{\Month \the\year}
-\newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
+\newcommand{\reporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
 % Configurations
 \geometry{
