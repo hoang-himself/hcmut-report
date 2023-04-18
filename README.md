@@ -1,5 +1,7 @@
 # Latex HCMUT Report Template
 
+[Preview](./report.pdf)
+
 ## Report type translation table
 
 | Vietnamese                  | English                      |
