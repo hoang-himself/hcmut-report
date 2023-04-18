@@ -159,36 +159,38 @@
 \fancyfoot[C]{\thepage}
 
 % Custom pages and sections
-\def\coverpage{
+\newcommand{\coverpage}{
   \pagestyle{empty}
 
   \vspace*{-3\baselineskip}
   \begin{center}
-    VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY
+    \MakeUppercase{\@upperuniname}
 
-    HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
+    \MakeUppercase{\@uniname}
 
     \MakeUppercase{\@deptname}
-    \\[5\baselineskip]
+    \vfill
     \includegraphics[scale=0.4]{graphics/hcmut.png}
-    \\[3\baselineskip]
+    \vfill
+    \bfseries
     \begin{tabular}{c}
-      \textbf{\Large \@coursename}                                 \\
-      {}                                                           \\
-      \midrule                                                     \\
-      {}                                                           \\
-      \textbf{\Large \@reporttype}                                 \\
-      {}                                                           \\
-      \textbf{\Huge \parbox[c]{0.8\linewidth}{\centering \@title}} \\
-      {}                                                           \\
+      \Large\@coursename                                 \\
+      {}                                                 \\
+      \midrule                                           \\
+      {}                                                 \\
+      \Large\@reporttype                                 \\
+      {}                                                 \\
+      \Huge\parbox[c]{0.8\linewidth}{\centering \@title} \\
+      {}                                                 \\
       \bottomrule
     \end{tabular}
-    \vfill%
+    \vfill
+    \mdseries
     \begin{tabular}{rll}
       Advisor: & \@advisor & \\
-      % Student: & Name      & ID \\
+      %Student: & Name      & ID \\
     \end{tabular}
-    \\[3\baselineskip]
+    \vfill
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 
