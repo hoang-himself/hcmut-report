@@ -13,7 +13,7 @@
 \RequirePackage{booktabs}
 \RequirePackage[center]{caption}
 
-\RequirePackage{fancyhdr,lastpage,hyperref}
+\RequirePackage{fancyhdr,hyperref}
 \RequirePackage[super,square,sort]{natbib}
 \RequirePackage[nameinlink]{cleveref} % use \Cref{} instead of \ref{}
 
@@ -22,8 +22,6 @@
 
 % Draft watermark
 % https://github.com/callegar/LaTeX-draftwatermark
-
-%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
 % Custom commands
 \newcommand{\Month}{
@@ -42,6 +40,9 @@
   \or December
   \fi
 }
+
+\newcommand{\@upperuniname}{Vietnam National University, Ho Chi Minh City}
+\newcommand{\@uniname}{Ho Chi Minh City University of Technology}
 
 \newcommand{\@deptname}{Faculty of Computer Science and Engineering}
 \newcommand{\deptname}[1]{\renewcommand{\@deptname}{#1}}
@@ -64,10 +65,13 @@
 \newcommand{\reporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
 % Configurations
+%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
+
 \geometry{
   paper=a4paper,
-  vmargin=3cm,
-  hmargin=2cm,
+  left=3cm,
+  right=2cm,
+  vmargin=2cm,
   includeheadfoot=true,
   headheight=30pt
 }
@@ -104,36 +108,59 @@
   urlcolor=blue
 }
 
-\pagestyle{fancy}
-
 \renewcommand{\headrulewidth}{0.3pt}
-\fancyhead{}
-\fancyhead[L]{
-  \begin{tabular}{rl}
-    \begin{picture}(25,15)(0,0)
-      \put(0,-8){\includegraphics[width=8mm,height=8mm]{graphics/hcmut.png}}
-    \end{picture}
-    \begin{tabular}{l}
-      \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City} \\
-      \textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
-    \end{tabular}
-  \end{tabular}
-}
-\fancyhead[R]{
-  \begin{tabular}{l}
-    \tiny \bf \\
-    \tiny \bf
-  \end{tabular}
-}
+\renewcommand{\footrulewidth}{0pt}
 
-\renewcommand{\footrulewidth}{0.3pt}
-\fancyfoot{}
-\fancyfoot[L]{\scriptsize \ttfamily \@reporttype}
-\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\pagestyle{fancy}
+\fancyhf{}
+
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ #1}}
+
+\if@twoside
+  \fancyhead[EL]{
+    \bfseries
+    \begin{tabular}{rl}
+      \begin{picture}(25,15)(0,0)
+        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \end{picture}
+      \begin{tabular}{l}
+        \ttfamily\@uniname \\
+        \ttfamily\@deptname \\
+      \end{tabular}
+    \end{tabular}
+  }
+  \fancyhead[OR]{
+    \bfseries
+    \begin{tabular}{rl}
+      \begin{tabular}{r}
+        \ttfamily\@uniname \\
+        \ttfamily\@deptname \\
+      \end{tabular}
+      \begin{picture}(25,15)(0,0)
+        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \end{picture}
+    \end{tabular}
+  }
+\else
+  \fancyhead[R]{
+    \bfseries
+    \begin{tabular}{rl}
+      \begin{tabular}{r}
+        \ttfamily\@uniname \\
+        \ttfamily\@deptname \\
+      \end{tabular}
+      \begin{picture}(25,15)(0,0)
+        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \end{picture}
+    \end{tabular}
+  }
+\fi
+
+\fancyfoot[C]{\thepage}
 
 % Custom pages and sections
 \def\coverpage{
-  \thispagestyle{empty}
+  \pagestyle{empty}
 
   \vspace*{-3\baselineskip}
   \begin{center}
@@ -165,5 +192,6 @@
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 
-  \clearpage
+  \cleardoublepage
+  \pagestyle{fancy}
 }
