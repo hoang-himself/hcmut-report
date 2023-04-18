@@ -76,19 +76,14 @@
   headheight=30pt
 }
 
-\onehalfspacing%
+\onehalfspacing
+\raggedbottom
 
 % Allow page breaks inside align* environment
 %\allowdisplaybreaks{}
 
 % Makes a lot of things blue, avoid at all costs
 %\everymath{\color{blue}}
-
-% Table of contents section text
-%\AtBeginDocument{\renewcommand*\contentsname{Contents}}
-
-% References section text
-%\AtBeginDocument{\renewcommand*\refname{References}}
 
 % Numbering format
 % {equation}{section} means <section number>.<equation number>

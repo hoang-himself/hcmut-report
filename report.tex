@@ -22,8 +22,11 @@
 \reporttype{Report type h}
 \title{Report title h}
 \advisor{Advisor h}
-\newcounter{memberrowno}
-\setcounter{memberrowno}{0}
+
+% Rename some sections
+%\AtBeginDocument{\renewcommand*{\contentsname}{Contents}}
+%\AtBeginDocument{\renewcommand*{\refname}{References}}
+%\AtBeginDocument{\renewcommand*{\bibname}{References}}
 
 % Custom commands
 \newcommand*\mean[1]{\bar{#1}}
@@ -31,22 +34,24 @@
 \begin{document}
 \coverpage%
 
-\section*{Member list \& Workload}
-\begin{center}
-  \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llcc}
-    \toprule
-    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{Student ID} & \textbf{Contribution} \\
-    \midrule
-                                     & h                  & xxxxxxx             & 100\%                       \\
-                                     & h                  & xxxxxxx             & 100\%                       \\
-    \bottomrule
-  \end{tabular}
-\end{center}
+%\section*{Member list \& Workload}
+%\newcounter{memberrowno}
+%\setcounter{memberrowno}{0}
+%\begin{center}
+%  \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llcc}
+%    \toprule
+%    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{Student ID} & \textbf{Contribution} \\
+%    \midrule
+%                                     & h                  & xxxxxxx             & 100\%                       \\
+%                                     & h                  & xxxxxxx             & 100\%                       \\
+%    \bottomrule
+%  \end{tabular}
+%\end{center}
+%\clearpage
 
-\newpage
 \tableofcontents
-\newpage
 
+\clearpage
 \section{Normal section}
 This is how you normally work with \LaTeX, but you can also split a project into smaller files for easier management.
 To import other files, you can use \mintinline{latex}{\input{}} or \mintinline{latex}{\include{}}.
@@ -56,8 +61,8 @@ There differences can be found at \url{https://tex.stackexchange.com/a/250}, but
   \mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}
 \end{center}
 
-\include{chapters/example/bettertables.tex}
-\include{chapters/example/betterenum.tex}
+\input{chapters/example/bettertables.tex}
+\input{chapters/example/betterenum.tex}
 \include{chapters/example/codespace.tex}
 
 \bibliographystyle{plain}
