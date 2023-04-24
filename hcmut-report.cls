@@ -111,12 +111,16 @@
 
 %\renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ #1}}
 
+% The drawing units are interpreted as multiples of \unitlength
+% unless a unit is given
+%\setlength{\unitlength}{1pt}
+
 \if@twoside
   \fancyhead[EL]{
     \bfseries
     \begin{tabular}{rl}
-      \begin{picture}(25,15)(0,0)
-        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \begin{picture}(20pt,20pt)
+        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
       \begin{tabular}{l}
         \ttfamily\@uniname \\
@@ -131,8 +135,8 @@
         \ttfamily\@uniname \\
         \ttfamily\@deptname \\
       \end{tabular}
-      \begin{picture}(25,15)(0,0)
-        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \begin{picture}(20pt,20pt)
+        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
     \end{tabular}
   }
@@ -144,8 +148,8 @@
         \ttfamily\@uniname \\
         \ttfamily\@deptname \\
       \end{tabular}
-      \begin{picture}(25,15)(0,0)
-        \put(0,-8){\includegraphics[width=8mm]{graphics/hcmut.png}}
+      \begin{picture}(20pt,20pt)
+        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
     \end{tabular}
   }
