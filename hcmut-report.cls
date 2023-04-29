@@ -41,7 +41,7 @@
   \fi
 }
 
-\newcommand{\@upperuniname}{Vietnam National University, Ho Chi Minh City}
+\newcommand{\@upperuniname}{Vietnam National University Ho Chi Minh City}
 \newcommand{\@uniname}{Ho Chi Minh City University of Technology}
 
 \newcommand{\@deptname}{Faculty of Computer Science and Engineering}
