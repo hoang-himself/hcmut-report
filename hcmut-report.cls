@@ -85,9 +85,8 @@
 % Makes a lot of things blue, avoid at all costs
 %\everymath{\color{blue}}
 
-% Numbering format
-% {equation}{section} means <section number>.<equation number>
-% {equation}{subsection} means <section number>.<subsection number>.<equation number>
+% Set format of numbering depth for counters (equations, figures, tables, etc.)
+% Use package chngcntr if you want more advanced control
 %\numberwithin{equation}{section}
 
 % Set depth of numbering for sections and table of contents
