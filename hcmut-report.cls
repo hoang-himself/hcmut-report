@@ -3,7 +3,7 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[a4paper]{article}
+\LoadClass[12pt,a4paper]{article}
 
 \RequirePackage[utf8]{vntex,inputenc}
 \RequirePackage{anyfontsize,amsmath,amssymb}
@@ -15,13 +15,9 @@
 
 \RequirePackage{fancyhdr,hyperref}
 \RequirePackage[super,square,sort]{natbib}
-\RequirePackage[nameinlink]{cleveref} % use \Cref{} instead of \ref{}
 
 % Change to '[english,vietnamese]' to use Vietnamese labels
 \RequirePackage[english]{babel}
-
-% Draft watermark
-% https://github.com/callegar/LaTeX-draftwatermark
 
 % Custom commands
 \newcommand{\Month}{
@@ -78,20 +74,6 @@
 
 \onehalfspacing
 \raggedbottom
-
-% Allow page breaks inside align* environment
-%\allowdisplaybreaks{}
-
-% Makes a lot of things blue, avoid at all costs
-%\everymath{\color{blue}}
-
-% Set format of numbering depth for counters (equations, figures, tables, etc.)
-% Use package chngcntr if you want more advanced control
-%\numberwithin{equation}{section}
-
-% Set depth of numbering for sections and table of contents
-%\setcounter{secnumdepth}{3}
-%\setcounter{tocdepth}{3}
 
 \AtBeginDocument{\renewcommand*\bibname{References}}
 

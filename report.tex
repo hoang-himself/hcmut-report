@@ -1,8 +1,8 @@
 \documentclass[twoside]{hcmut-report}
 \usepackage{codespace}
 
-% Sub-preambles
-% https://github.com/MartinScharrer/standalone
+% Draft watermark
+% https://github.com/callegar/LaTeX-draftwatermark
 
 % Encodings
 \usepackage{gensymb,textcomp}
@@ -17,11 +17,32 @@
 % Graphics
 \usepackage{caption,float}
 
+% References
+% Use \Cref{} instead of \ref{}
+\usepackage[nameinlink]{cleveref}
+
+% Sub-preambles
+% https://github.com/MartinScharrer/standalone
+
 % Configurations
 \coursename{Course name h}
 \reporttype{Report type h}
 \title{Report title h}
 \advisor{Advisor h}
+
+% Allow page breaks inside align* environment
+%\allowdisplaybreaks{}
+
+% Makes a lot of things blue, avoid at all costs
+%\everymath{\color{blue}}
+
+% Set depth of numbering for counters (equations, figures, tables, etc.)
+% Use package chngcntr if you want more advanced control
+%\numberwithin{equation}{section}
+
+% Set depth of numbering for sections and table of contents
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
 
 % Rename some sections
 %\AtBeginDocument{\renewcommand*{\contentsname}{Contents}}
@@ -29,7 +50,7 @@
 %\AtBeginDocument{\renewcommand*{\bibname}{References}}
 
 % Custom commands
-\newcommand*\mean[1]{\bar{#1}}
+%\newcommand*\mean[1]{\bar{#1}}
 
 \begin{document}
 \coverpage%
