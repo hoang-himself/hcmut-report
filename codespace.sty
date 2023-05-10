@@ -7,17 +7,18 @@
 \RequirePackage{minted,verbatim}
 \RequirePackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 
-\usemintedstyle{emacs}
-
-\newcommand{\@codeframe}{
+% Configurations
+\mdfdefinestyle{codeframe}{
   backgroundcolor=magenta!10,
   leftline=false,
   rightline=false,
   nobreak=false
 }
-\newcommand{\codeframe}[1]{\renewcommand{\@codeframe}{#1}}
 
-\newcommand{\@codestyle}{
+\usemintedstyle{emacs}
+
+% \setmintedinline takes higher precedance in case you want to use it
+\setminted{
   linenos=true,
   autogobble=true,
   breaklines=true,
@@ -26,19 +27,18 @@
   obeytabs=true,
   tabsize=2
 }
-\newcommand{\codestyle}[1]{\renewcommand{\@codestyle}{#1}}
 
-\newenvironment{code}[2][]{
+\newenvironment{code}[1]{
   \VerbatimEnvironment%
-  \edef\xmdframed{\noexpand\begin{mdframed}[\@codeframe]}\xmdframed%
-    \edef\xminted{\noexpand\begin{minted}[\@codestyle,#1]{#2}}\xminted%
+  \begin{mdframed}[style=codeframe]%
+    \begin{minted}{#1}%
 }{
     \end{minted}%
   \end{mdframed}%
 }
 
-\newcommand{\inputcode}[3][]{
-  \edef\xmdframed{\noexpand\begin{mdframed}[\@codeframe]}\xmdframed%
-    \edef\xinputminted{\noexpand\inputminted[\@codestyle,#1]{#2}{#3}}\xinputminted%
+\newcommand{\inputcode}[2]{
+  \begin{mdframed}[style=codeframe]%
+    \inputminted{#1}{#2}%
   \end{mdframed}%
 }

@@ -5,15 +5,19 @@ Here are inline code, embedded codeblock, and external import.
 \begin{itemize}
   \item External import
 
-  \inputcode[highlightlines={1,10-13}]{Python}{code/example.py}
+  \inputcode{Python}{code/example.py}
+
+  There used to be \mintinline{text}{[highlightlines={1,10-13}]} options here but support for it got removed.
 
   \item With custom line range
 
-  \inputcode[firstline=10,lastline=13]{Python}{code/example.py}
+  \inputcode{Python}{code/example.py}
+
+  There used to be \mintinline{text}{[firstline=10,lastline=13]} options here but support for it got removed.
 
   \item Embedded
 
-  \begin{code}{Python}
+  \begin{code}{python}
   class iostream:
       def __lshift__(self, other):
           print(other, end='')
