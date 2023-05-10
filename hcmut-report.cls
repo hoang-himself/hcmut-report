@@ -54,6 +54,9 @@
 \newcommand{\@advisor}{Advisor}
 \newcommand{\advisor}[1]{\renewcommand{\@advisor}{#1}}
 
+\newcommand{\@stuname}{STUDENT:\ H (xxxxxxx)}
+\newcommand{\stuname}[1]{\renewcommand{\@stuname}{#1}}
+
 \newcommand{\@reportplace}{Ho Chi Minh City}
 \newcommand{\reportplace}[1]{\renewcommand{\@reportplace}{#1}}
 
@@ -168,7 +171,7 @@
     \mdseries
     \begin{tabular}{rll}
       Advisor: & \@advisor & \\
-      %Student: & Name      & ID \\
+      Student: \@stuname \\
     \end{tabular}
     \vfill
     \MakeUppercase{\@reportplace, \@reporttime}
