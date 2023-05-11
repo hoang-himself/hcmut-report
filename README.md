@@ -1,6 +1,6 @@
 # Latex HCMUT Report Template
 
-[Preview](./report.pdf)
+[Preview](https://www.overleaf.com/latex/templates/hcmut-report-template/mkwzqtzmkzdj)
 
 ## Report type translation table
 
