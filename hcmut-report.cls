@@ -103,8 +103,8 @@
   \fancyhead[EL]{
     \bfseries
     \begin{tabular}{rl}
-      \begin{picture}(20pt,20pt)
-        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
+      \begin{picture}(25pt,15pt)
+        \put(0,-8pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
       \begin{tabular}{l}
         \ttfamily\@uniname \\
@@ -119,8 +119,8 @@
         \ttfamily\@uniname \\
         \ttfamily\@deptname \\
       \end{tabular}
-      \begin{picture}(20pt,20pt)
-        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
+      \begin{picture}(25pt,15pt)
+        \put(0,-8pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
     \end{tabular}
   }
@@ -132,8 +132,8 @@
         \ttfamily\@uniname \\
         \ttfamily\@deptname \\
       \end{tabular}
-      \begin{picture}(20pt,20pt)
-        \put(0,-7pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
+      \begin{picture}(25pt,15pt)
+        \put(0,-8pt){\includegraphics[width=20pt]{graphics/hcmut.png}}
       \end{picture}
     \end{tabular}
   }
