@@ -17,9 +17,15 @@
 % Graphics
 \usepackage{caption,float}
 
+% Add options for figures, like max width, framing, etc.
+\usepackage[export]{adjustbox}
+
 % References
 % Use \Cref{} instead of \ref{}
 \usepackage[nameinlink]{cleveref}
+
+% FOR DEMONSTRATION PURPOSES, REMOVE IN PRODUCTION
+\usepackage{mwe}
 
 % Sub-preambles
 % https://github.com/MartinScharrer/standalone
@@ -42,7 +48,7 @@
 %\everymath{\color{blue}}
 
 % Set depth of numbering for counters (equations, figures, tables, etc.)
-% Use package chngcntr if you want more advanced control
+% Use package chngcntr if you want more control
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
@@ -92,6 +98,7 @@ There differences can be found at \url{https://tex.stackexchange.com/a/250}, but
 \input{chapters/example/bettertables.tex}
 \input{chapters/example/betterenum.tex}
 \include{chapters/example/codespace.tex}
+\include{chapters/example/figwidth.tex}
 
 \bibliographystyle{plain}
 \bibliography{refs/example.bib}
