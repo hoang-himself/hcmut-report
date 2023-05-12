@@ -20,3 +20,13 @@ Tabularx is simply tabular but with X environment, meaning that it will try to u
 \end{center}
 
 More information can be found at \url{https://latex-tutorial.com/tables-in-latex/}.
+
+In \mintinline{latex}{tabular}, with the \mintinline{latex}{p}, \mintinline{latex}{m} or \mintinline{latex}{b} column types, sometimes you will notice that the width of the table is wider than the sum of the widths of the columns.
+This is due to the padding added by the \mintinline{latex}{\tabcolsep} and the line width of the vertical separators which are added by default.
+
+\begin{code}{latex}
+  \tabcolsep + p{length} + \tabcolsep
+\end{code}
+
+By default, \mintinline{latex}{tabcolsep} is set to 6pt, which equals to 2.12mm in digital printing.
+The use of \mintinline{latex}{@{}..@{}} voids this behavior.
