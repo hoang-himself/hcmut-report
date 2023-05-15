@@ -1,10 +1,14 @@
+% IMPORTANT: This package requires python Pygments and --shell-escape flag
 \ProvidesPackage{codespace}
 
-% Need python Pygments and --shell-escape flag
-\RequirePackage[dvipsnames]{xcolor}
+% Options can be used to add more predefined colors (see Section 4)
+% e.g.: dvipsnames, svgnames, x11names
+\RequirePackage{xcolor}
+
 \RequirePackage{tikz}
 \RequirePackage[framemethod=tikz]{mdframed}
 \RequirePackage{minted,verbatim}
+
 \RequirePackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 
 % Configurations
