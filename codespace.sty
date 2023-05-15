@@ -37,8 +37,8 @@
   \end{mdframed}%
 }
 
-\newcommand{\inputcode}[2]{
+\newcommand{\inputcode}[3][]{
   \begin{mdframed}[style=codeframe]%
-    \inputminted{#1}{#2}%
+    \inputminted[#1]{#2}{#3}%
   \end{mdframed}%
 }
