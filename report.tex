@@ -48,11 +48,10 @@
 % Makes a lot of things blue, avoid at all costs
 %\everymath{\color{blue}}
 
-% Set depth of numbering for counters (equations, figures, tables, etc.)
-% Use package chngcntr if you want more control
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
+% Set depth of numbering for counters
+\counterwithin{equation}{section}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
 
 % Set depth of numbering for sections and table of contents
 %\setcounter{secnumdepth}{3}
