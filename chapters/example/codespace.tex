@@ -5,22 +5,19 @@ Here are inline code, embedded codeblock, and external import.
 \begin{itemize}
   \item External import
 
-  \inputcode{Python}[highlightlines={1,10-13}]{code/example.py}
+  \inputcode[highlightlines={1,10-13}]{Python}{code/example.py}
 
   \item With custom line range
 
-  \inputcode{Python}[firstnumber=1,firstline=10,lastline=13]{code/example.py}
+  \inputcode[firstnumber=1,firstline=10,lastline=13]{Python}{code/example.py}
 
   \item Embedded
 
   \begin{code}{python}
-  class iostream:
-      def __lshift__(self, other):
-          print(other, end='')
-          return self
-
-      def __repr__(self):
-          return ''
+  if __name__ == "__main__":
+      cout = iostream()
+      endl = '\n'
+      cout << "Hello" << ", " << "World!" << endl
   \end{code}
 
   \item Inline
