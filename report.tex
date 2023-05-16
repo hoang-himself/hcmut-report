@@ -95,6 +95,29 @@ There differences can be found at \url{https://tex.stackexchange.com/a/250}, but
   \mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}
 \end{center}
 
+\section{Label prefixes}
+There are no definite rules for label prefixes, but you can use the following as a guideline.
+\begin{itemize}
+  \item \textbf{chap:} for chapters
+  \item \textbf{sec:} for sections
+  \item \textbf{subsec:} for subsections
+  \item \textbf{eq:} for equations
+  \item \textbf{fig:} for figures
+  \item \textbf{tab:} for tables
+  \item \textbf{enum:} for enumerators and items
+  \item \textbf{fn:} for footnotes
+  \item \textbf{lst:} for listings
+  \item \textbf{alg:} for algorithms
+  \item \textbf{app:} for appendices
+\end{itemize}
+
+The \mintinline{latex}{\caption} macro increases the used counter and sets the current label text which is used by \mintinline{latex}{\label}.
+If you use \mintinline{latex}{\label} before it the old label text is used instead, which leads to a wrong number.
+Always use \mintinline{latex}{\label} after \mintinline{latex}{\caption} and not before or in it.
+
+That said, conventions are just conventions, and you can use whatever you want as long as you are consistent.
+
+\clearpage
 \input{chapters/example/better-tables.tex}
 \input{chapters/example/better-enum.tex}
 \include{chapters/example/codespace.tex}
