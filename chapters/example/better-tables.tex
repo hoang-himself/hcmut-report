@@ -1,7 +1,7 @@
 \section{Better tables}
-The recommended way is by using the booktabs package and drop all vertical rules.
+The recommended way is by using the \mintinline{latex}{booktabs} package and drop all vertical rules.
 
-Tabularx is simply tabular but with X environment, meaning that it will try to use all of \mintinline{latex}{\linewidth}.
+\mintinline{latex}{tabularx} is simply tabular but with X environment, meaning that it will try to use all of \mintinline{latex}{\linewidth}.
 
 \begin{center}
   \begin{tabularx}{\linewidth}{l*{2}{X}}
@@ -30,3 +30,99 @@ This is due to the padding added by the \mintinline{latex}{\tabcolsep} and the l
 
 By default, \mintinline{latex}{tabcolsep} is set to 6pt, which equals to 2.12mm in digital printing.
 The use of \mintinline{latex}{@{}..@{}} voids this behavior.
+
+Additionally, if you have to insert a very long table, which takes up two or more pages in your document, use the \mintinline{latex}{longtable} package.
+
+\begin{longtable}[H]{|m{0.3\linewidth}|m{0.3\linewidth}|}
+  \caption{Long table caption}\label{tab:long}          \\
+  \toprule
+  \multicolumn{2}{|c|}{Begin of Table}                  \\
+  \midrule
+  Something     & something else                        \\
+  \midrule
+  \endfirsthead
+
+  \toprule
+  \multicolumn{2}{|c|}{Continuation of \Cref{tab:long}} \\
+  \midrule
+  Something     & something else                        \\
+  \midrule
+  \endhead
+
+  \midrule
+  \endfoot
+
+  \midrule
+  \multicolumn{2}{|c|}{End of Table}                    \\
+  \bottomrule
+  \endlastfoot
+
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+  Lots of lines & like this                             \\
+\end{longtable}
+
+You may use the \mintinline{latex}{\label} command so that you can cross reference longtables with \mintinline{latex}{\ref}.
+Note however, that the \mintinline{latex}{\label} command should not be used in a heading that may appear more than once.
+Place it either in the firsthead, or in the body of the table.
+It should not be the first command in any entry.
