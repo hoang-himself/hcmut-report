@@ -1,13 +1,57 @@
 \section{Codespace}
+\subsection{Listings}
+This is the recommended way to insert simple code.
+
+\begin{itemize}
+  \item \lstinputlisting[
+    language=python,
+    caption={External import},name=ext-import,label=lst:ext-import
+  ]{code/example.py}
+
+  \item \lstinputlisting[
+    firstline=10,lastline=13,language=python,
+    caption={External import but with a line range},
+    name=line-range,label=lst:line-range
+  ]{code/example.py}
+
+  \item \begin{lstlisting}[
+    language=python,caption={Embedded},name=embedded,label=lst:embedded
+  ]
+  from typing import Iterator
+
+  # This is an example
+  class Math:
+      @staticmethod
+      def fib(n: int) -> Iterator[int]:
+          """Fibonacci series up to n."""
+          a, b = 0, 1
+          while a < n:
+              yield a
+              a, b = b, a + b
+
+  result = sum(Math.fib(42))
+  print("The answer is {}".format(result))
+  \end{lstlisting}
+
+  \item Inline
+
+  \lstinline[
+    language=python,
+    name=inline,label=lst:inline
+  ]{print('Hello, world!')}
+\end{itemize}
+
 \subsection{Minted}
-\emph{Important: Minted requires python Pygments and the \mintinline{text}{--shell-escape} flag.}
+This provide better looking code, but requires external setup:
+
+\emph{Minted requires python Pygments and the \mintinline{text}{--shell-escape} flag.}
 
 \begin{itemize}
   \item External import
 
   \inputcode[highlightlines={1,10-13}]{Python}{code/example.py}
 
-  \item With custom line range
+  \item With a line range
 
   \inputcode[firstnumber=1,firstline=10,lastline=13]{Python}{code/example.py}
 
