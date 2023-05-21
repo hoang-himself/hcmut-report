@@ -3,7 +3,10 @@ The recommended way is by using the \mintinline{latex}{booktabs} package and dro
 
 \mintinline{latex}{tabularx} is simply tabular but with X environment, meaning that it will try to use all of \mintinline{latex}{\linewidth}.
 
-\begin{center}
+\begin{table}[H]
+  \centering
+  \caption{Tabularx table}%
+  \label{tab:tabularx}
   \begin{tabularx}{\linewidth}{l*{2}{X}}
     \toprule
          & OOP & FP \\
@@ -17,7 +20,7 @@ The recommended way is by using the \mintinline{latex}{booktabs} package and dro
          &     &    \\
     \bottomrule
   \end{tabularx}
-\end{center}
+\end{table}
 
 More information can be found at \url{https://latex-tutorial.com/tables-in-latex/}.
 
