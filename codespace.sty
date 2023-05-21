@@ -1,4 +1,3 @@
-% IMPORTANT: This package requires python Pygments and --shell-escape flag
 \ProvidesPackage{codespace}
 
 % Options can be used to add more predefined colors (see Section 4)
@@ -12,29 +11,35 @@
 \RequirePackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 
 % Configurations
-\mdfdefinestyle{codeframe}{
-  backgroundcolor=magenta!10,
+\mdfsetup{
   leftline=false,
   rightline=false,
+  backgroundcolor=magenta!10,
   nobreak=false
 }
 
 \usemintedstyle{emacs}
 
-% \setmintedinline takes higher precedance in case you want to use it
 \setminted{
   linenos=true,
+  stepnumber=3,
   autogobble=true,
   breaklines=true,
-  breaksymbolleft={},
-  firstnumber=1,
-  obeytabs=true,
   tabsize=2
 }
 
 \newenvironment{code}[1]{
   \VerbatimEnvironment%
-  \begin{mdframed}[style=codeframe]%
+  \begin{mdframed}%
+    \begin{minted}{#1}%
+}{
+    \end{minted}%
+  \end{mdframed}%
+}
+
+\newenvironment{altcode}[1]{
+  \VerbatimEnvironment%
+  \begin{mdframed}[backgroundcolor=gray!10]%
     \begin{minted}{#1}%
 }{
     \end{minted}%
@@ -42,7 +47,7 @@
 }
 
 \newcommand{\inputcode}[3][]{
-  \begin{mdframed}[style=codeframe]%
+  \begin{mdframed}%
     \inputminted[#1]{#2}{#3}%
   \end{mdframed}%
 }
