@@ -1,6 +1,6 @@
-\section{Codeblocks}
-There are several ways to embed code in a \LaTeX{} file.
-Here are inline code, embedded codeblock, and external import.
+\section{Codespace}
+\subsection{Minted}
+\emph{Important: Minted requires python Pygments and the \mintinline{text}{--shell-escape} flag.}
 
 \begin{itemize}
   \item External import
@@ -14,10 +14,20 @@ Here are inline code, embedded codeblock, and external import.
   \item Embedded
 
   \begin{code}{python}
-  if __name__ == "__main__":
-      cout = iostream()
-      endl = '\n'
-      cout << "Hello" << ", " << "World!" << endl
+  from typing import Iterator
+
+  # This is an example
+  class Math:
+      @staticmethod
+      def fib(n: int) -> Iterator[int]:
+          """Fibonacci series up to n."""
+          a, b = 0, 1
+          while a < n:
+              yield a
+              a, b = b, a + b
+
+  result = sum(Math.fib(42))
+  print("The answer is {}".format(result))
   \end{code}
 
   \item Inline
@@ -25,8 +35,7 @@ Here are inline code, embedded codeblock, and external import.
   \mintinline{Python}{print('Hello, world!')}
 \end{itemize}
 
-You can also define your custom inline as \url{https://tex.stackexchange.com/a/148479}.
-
+\subsection{Algorithms}
 This is one way to input algorithms.
 
 \begin{algorithm}[H]
