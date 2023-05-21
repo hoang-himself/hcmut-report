@@ -6,20 +6,52 @@
 
 \RequirePackage{tikz}
 \RequirePackage[framemethod=tikz]{mdframed}
+\RequirePackage{listings,lstautogobble}
 \RequirePackage{minted,verbatim}
 
 % Configurations
+\colorlet{codebackground}{magenta!10}
+\definecolor{codebasic}{RGB}{106,106,106}
+\definecolor{codeidentifier}{RGB}{0,0,0}
+\definecolor{codecomment}{RGB}{0,136,0}
+\definecolor{codestring}{RGB}{187,68,68}
+\definecolor{codekeyword}{RGB}{170,34,255}
+
+\lstdefinestyle{codeframe}{
+  float=H,
+  frame=lines,
+  backgroundcolor=\color{codebackground},
+  numbers=left,
+  numbersep=2pt,
+  numberstyle=\tiny,
+  stepnumber=3,
+}
+\lstdefinestyle{codestyle}{
+  basicstyle=\color{codebasic}\ttfamily,
+  identifierstyle=\color{codeidentifier},
+  commentstyle=\color{codecomment}\itshape,
+  stringstyle=\color{codestring},
+  keywordstyle=\color{codekeyword},
+  autogobble=true,
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=2
+}
+\lstset{
+  style=codeframe,
+  style=codestyle
+}
+
 \mdfsetup{
   leftline=false,
   rightline=false,
-  backgroundcolor=magenta!10,
+  backgroundcolor=codebackground,
   nobreak=false
 }
-
 \usemintedstyle{emacs}
-
 \setminted{
   linenos=true,
+  numbers=left,
   stepnumber=3,
   autogobble=true,
   breaklines=true,
