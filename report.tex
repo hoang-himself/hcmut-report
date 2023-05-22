@@ -49,9 +49,10 @@
 %\everymath{\color{blue}}
 
 % Set depth of numbering for counters
-\counterwithin{equation}{section}
-\counterwithin{table}{section}
-\counterwithin{figure}{section}
+\AtBeginDocument{\counterwithin{equation}{section}}
+\AtBeginDocument{\counterwithin{table}{section}}
+\AtBeginDocument{\counterwithin{figure}{section}}
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
 
 % Set depth of numbering for sections and table of contents
 %\setcounter{secnumdepth}{3}
