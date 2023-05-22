@@ -2,10 +2,22 @@
 
 \hrule % to see \linewidth
 
-\includegraphics[max width=0.9\linewidth]{example-image-1x1}
+\begin{figure}[H]
+  \includegraphics[max width=0.9\linewidth]{example-image-1x1}
+  \caption{Example image 1x1}%
+  \label{fig:example-image-1x1}
+\end{figure}
 
-\includegraphics[frame,scale=0.7]{example-image-a4}
+\begin{figure}[H]
+  \includegraphics[frame,scale=0.7]{example-image-a4}
+  \caption{Example image A4}%
+  \label{fig:example-image-a4}
+\end{figure}
 
 With \mintinline{latex}{\adjincludegraphics} (or \mintinline{latex}{\adjustimage}) you can also use the original width as \mintinline{latex}{\width}:
 
-\adjincludegraphics[width=\ifdim \width > \linewidth \linewidth \else \width \fi]{example-image}
+\begin{figure}[H]
+  \adjincludegraphics[width=\ifdim \width > \linewidth \linewidth \else \width \fi]{example-image}
+  \caption{Set figure width imperatively}%
+  \label{fig:imperative-width}
+\end{figure}
