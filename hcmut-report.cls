@@ -72,11 +72,12 @@
   right=2cm,
   vmargin=2cm,
   includeheadfoot=true,
-  headheight=30pt
+  headheight=35pt
 }
 
 \onehalfspacing
 \raggedbottom
+\renewcommand{\arraystretch}{1.2}
 
 \AtBeginDocument{\renewcommand*\bibname{References}}
 
