@@ -180,8 +180,8 @@
     \vfill
     \mdseries
     \begin{tabular}{rll}
-      Advisor: & \@advisor & \\
-      Student: \@stuname \\
+      Advisor(s): \@advisor \\
+      Student(s): \@stuname \\
     \end{tabular}
     \vfill
     \MakeUppercase{\@reportplace, \@reporttime}
