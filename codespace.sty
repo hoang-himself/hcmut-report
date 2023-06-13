@@ -21,9 +21,6 @@
   float=H,
   frame=lines,
   backgroundcolor=\color{codebackground},
-  numbers=left,
-  numbersep=2pt,
-  numberstyle=\tiny,
 }
 \lstdefinestyle{codestyle}{
   basicstyle=\color{codebasic}\ttfamily,
@@ -31,6 +28,10 @@
   commentstyle=\color{codecomment}\itshape,
   stringstyle=\color{codestring},
   keywordstyle=\color{codekeyword},
+  numbers=left,
+  %firstnumber=1,
+  numbersep=2pt,
+  numberstyle=\tiny,
   autogobble=true,
   breaklines=true,
   showstringspaces=false,
@@ -51,6 +52,7 @@
 \setminted{
   linenos=true,
   numbers=left,
+  %firstnumber=1,
   autogobble=true,
   breaklines=true,
   breaksymbolleft={},
