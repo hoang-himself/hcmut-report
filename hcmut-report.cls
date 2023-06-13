@@ -7,7 +7,7 @@
 
 \RequirePackage[utf8]{vntex,inputenc}
 \RequirePackage{anyfontsize,amsmath,amssymb}
-\RequirePackage[T5]{fontenc}
+\RequirePackage[T5,T1]{fontenc}
 
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
 \RequirePackage{booktabs}
@@ -63,8 +63,6 @@
 \newcommand{\reporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
 % Configurations
-%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
-
 \geometry{
   paper=a4paper,
   left=3cm,
